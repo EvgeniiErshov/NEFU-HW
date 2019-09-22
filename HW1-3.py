@@ -1,14 +1,15 @@
-import math
 
 def is_power_of_two(n):
-
-    sqrt_for = math.sqrt(n)
-
-    if sqrt_for**2 == n:
-        return True
-    else:
+    if (n == 0):
         return False
+    while (n != 1):
+        if (n % 2 != 0):
+            return False
+        n = n // 2
+
+    return True
 
 
-print (is_power_of_two(9))
-print (math.sqrt(9))
+
+print (is_power_of_two(1024))
+
